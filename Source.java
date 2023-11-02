@@ -1,3 +1,4 @@
+
 class Node<T> {
   T val;
   Node<T> next;
@@ -10,8 +11,17 @@ class Node<T> {
 
 class Source {
   public static int sumList(Node<Integer> head) {
-    // todo
-    return;
+    // initialize the head
+    Node<Integer> current = head;
+    // initialize the result/total
+    int total = 0;
+
+    while (current != null) {
+      total += current.val;
+      current = current.next;
+    }
+
+    return total;
   }
 
   public static void main(String[] args) {
